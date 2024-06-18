@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import moon from '../assets/moon.png'
+import sun from '../assets/sun.png'
+import Home from './Home';
 import 'animate.css';
 
 export function Header() {
@@ -9,6 +12,33 @@ export function Header() {
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
+
+    var [dark, setDark] = useState(true)
+
+
+    var jumbotron = document.getElementById('jumbotron');
+    var darkMode = () => {
+        if (dark === false) {
+            setDark(true)
+            try {
+                jumbotron.style.backgroundColor = '#010B13';
+                jumbotron.style.color = '#F8F9FA';      
+            } catch (error) {    
+                jumbotron.style.backgroundColor = '#010B13';
+                jumbotron.style.color = '#F8F9FA';      
+            }
+        } else {
+            setDark(false)
+            try {
+                jumbotron.style.backgroundColor = '#F8F9FA'; 
+                jumbotron.style.color = '#010B13';      
+            } catch (error) {
+                jumbotron.style.backgroundColor = '#F8F9FA'; 
+                jumbotron.style.color = '#010B13';   
+            }
+        }
+    }
+       
 
     return (
         <>
@@ -76,6 +106,11 @@ export function Header() {
                             </div>
                         </li>
                     </ul>
+                    <a onClick={darkMode}>
+                        <img src = {
+                            dark == false ? moon : sun
+                        } alt="" className='logo' />
+                    </a>
                 </div>
             </nav>
         </>
