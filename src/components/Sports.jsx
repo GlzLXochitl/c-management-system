@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { userData } from '../mocks/data.js';
 
 function Sports() {
@@ -9,6 +10,24 @@ function Sports() {
     } = userData;
 
     console.log(userData);
+
+    var [schedule, setSchedule] = useState({ actividad: "Baloncesto", lunes: "16:00", martes: "-", miercoles: "16:00", jueves: "-", viernes: "16:00", tallerista: "Jacob Escareño", email: "jescareño@utma.edu.mx"});
+
+    function futbol() {
+        setSchedule({actividad: "Futbol", lunes: "17:00", martes: "17:00", miercoles: "17:00", jueves: "-", viernes: "-", tallerista: "Carlos Galindo", email: "cgalindo@utma.edu.mx"});
+    }
+    function baloncesto() {
+        setSchedule({actividad: "Baloncesto", lunes: "16:00", martes: "-", miercoles: "16:00", jueves: "-", viernes: "16:00", tallerista: "Jacob Escareño", email: "jescareño@utma.edu.mx"});
+    }
+    function ajedrez() {
+        setSchedule({actividad: "Ajedrez", lunes: "15:00", martes: "15:00", miercoles: "-", jueves: "-", viernes: "15:00", tallerista: "Eduardo Corpus", email: "ecorpus@utma.edu.mx"});
+    }
+    function voleibol() {
+        setSchedule({actividad: "Voleibol", lunes: "15:00", martes: "-", miercoles: "16:00", jueves: "-", viernes: "16:00", tallerista: "Xochitl Leos", email: "xleos@utma.edu.mx"});
+    }
+    function tochito() {
+        setSchedule({actividad: "Tochito", lunes: "17:00", martes: "-", miercoles: "-", jueves: "17:00", viernes: "17:00", tallerista: "Emilio Romo", email: "eromo@utma.edu.mx"});
+    }
 
     return (
         <>
@@ -23,13 +42,19 @@ function Sports() {
                                 {/* ABOUT THE STUDENT */}
                                 <div className="card mb-4">
                                     <div className="card-body">
-                                        <h5 className="mb-4">About the activity</h5>
+                                        <h5 className="mb-4">{schedule.actividad}</h5>
                                         <p className="text-muted">
                                             {aboutStudent.text}
                                         </p>
                                     </div>
                                 </div>
-
+                                <div className='d-flex justify-content-around'>
+                                    <button className='btn btn-primary' onClick={futbol}>Futbol</button>
+                                    <button className='btn btn-primary' onClick={baloncesto}>Baloncesto</button>
+                                    <button className='btn btn-primary' onClick={ajedrez}>Ajedrez</button>
+                                    <button className='btn btn-primary' onClick={voleibol}>Voleibol</button>
+                                    <button className='btn btn-primary' onClick={tochito}>Tochito</button>
+                                </div>
                                 {/* EXTRACURRICULAR ACTIVITY */}
                                 <div className="card mb-4">
                                     <div className="card-body">
@@ -51,19 +76,15 @@ function Sports() {
                                                             <li>Wednesday</li>
                                                             <li>Thursday</li>
                                                             <li>Friday</li>
-                                                            <li>Saturday</li>
-                                                            <li>Sunday</li>
                                                         </ul>
                                                     </div>
                                                     <div>
                                                         <ul className="no-bullets">
-                                                            <li>{extracurricularAct.scheduleLunes}</li>
-                                                            <li>{extracurricularAct.scheduleMartes}</li>
-                                                            <li>{extracurricularAct.scheduleMiercoles}</li>
-                                                            <li>{extracurricularAct.scheduleJueves}</li>
-                                                            <li>{extracurricularAct.scheduleViernes}</li>
-                                                            <li>{extracurricularAct.scheduleSabado}</li>
-                                                            <li>{extracurricularAct.scheduleDomingo}</li>
+                                                            <li>{schedule.lunes}</li>
+                                                            <li>{schedule.martes}</li>
+                                                            <li>{schedule.miercoles}</li>
+                                                            <li>{schedule.jueves}</li>
+                                                            <li>{schedule.viernes}</li>
                                                         </ul>
                                                     </div>    
                                                 </div>
@@ -84,7 +105,7 @@ function Sports() {
                                             className="rounded-circle img-fluid tutor-avatar"                                            
                                         />
                                         <h5 className="my-3">
-                                            Fray
+                                            {schedule.tallerista}
                                         </h5>
                                     </div>
                                     <div>
@@ -95,9 +116,9 @@ function Sports() {
                                         <div className='disposition'>
                                             <div className='list'>
                                                 <p className='camp-space camp-design'>Tallerista:</p>
-                                                <p className='camp-space camp-text'>Fraygodofredo Perez Domingues</p>
+                                                <p className='camp-space camp-text'>{schedule.tallerista}</p>
                                                 <p className='camp-space camp-design'>Email:</p>
-                                                <p className='camp-space camp-text'>fraygodofredo.perez@utma.edu.mx</p>
+                                                <p className='camp-space camp-text'>{schedule.email}</p>
                                             </div>                             
                                         </div>  
                                     </div>

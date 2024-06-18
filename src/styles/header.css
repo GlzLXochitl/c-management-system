@@ -1,4 +1,15 @@
 /* HEADER */
+/* Estilos generales */
+.elemento-a-ocultar {
+  display: block;
+}
+
+/* Ocultar en pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+  .elemento-a-ocultar {
+    display: none;
+  }
+}
 
 #navbar {
   position: fixed;  /* Fixed positioning for the navbar */
@@ -144,6 +155,7 @@
   border: none;
   outline: none;
   padding: 10px;
+  display: block;
 }
 
 .configimg:hover {
@@ -153,3 +165,12 @@
 .configimg:focus {
   outline: none;  /* Remove focus outline */
 }
+
+
+/* Ocultar en pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+  .configimg {
+    display: none;
+  }
+}
+
