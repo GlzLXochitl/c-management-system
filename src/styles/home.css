@@ -120,3 +120,11 @@
 .btn-style:hover {
     background-color: #6c757d; /* darker background color */
 }
+
+@media (max-width: 1024px) {
+    .col-lg-4 {
+        h1 {
+            font-size: 35px;
+        }
+    }
+}

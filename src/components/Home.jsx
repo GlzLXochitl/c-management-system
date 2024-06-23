@@ -54,22 +54,30 @@ function Home() {
                     </div>
                 </div>
 
+                {/* TALLERES */}
+                
+
+
+
+
+
+
                 {/*TALLERES CULTURALES*/}
-                <div>
+                {/*<div>
                     <div className="container">
                         <div>
                             <h2 className="text-center courses-title">TALLERES CULTURALES</h2>
                         </div>
 
                         <div className="row">
-                            {/* cultural workshop cards */}
+                            {/* cultural workshop cards 
                             <div className="col-lg-4 cards-disposition">
                                 <div className="card card-disposition">
                                     <img src="https://via.placeholder.com/150" className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <Link to="/sports" className="btn btn-primary btn-style">Go somewhere</Link>
+                                        <Link to="" className="btn btn-primary btn-style">Go somewhere</Link>
                                     </div>
                                 </div>
                             </div>
@@ -79,7 +87,7 @@ function Home() {
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <Link to="/sports" className="btn btn-primary btn-style">Go somewhere</Link>
+                                        <Link to="" className="btn btn-primary btn-style">Go somewhere</Link>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +97,7 @@ function Home() {
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <Link to="/sports" className="btn btn-primary btn-style">Go somewhere</Link>
+                                        <Link to="" className="btn btn-primary btn-style">Go somewhere</Link>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +107,7 @@ function Home() {
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <Link to="/sports" className="btn btn-primary btn-style">Go somewhere</Link>
+                                        <Link to="" className="btn btn-primary btn-style">Go somewhere</Link>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +117,7 @@ function Home() {
                                     <div className="card-body">
                                         <h5 className="card-title">Card title</h5>
                                         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <Link to="/sports" className="btn btn-primary btn-style">Go somewhere</Link>
+                                        <Link to="" className="btn btn-primary btn-style">Go somewhere</Link>
                                     </div>
                                 </div>
                             </div>
@@ -117,14 +125,14 @@ function Home() {
                     </div>
                 </div>
 
-                {/*TALLERES DEPORTIVOS*/}
+                {/*TALLERES DEPORTIVOS
                 <div>
                     <div className="container" id='sports-container'>
                         <div>
                             <h2 className="text-center courses-title">TALLERES DEPORTIVOS</h2>
                         </div>
                         <div className="row">
-                            {/* sports workshop cards */}
+                            {/* sports workshop cards 
                             <div className="col-lg-4 cards-disposition">
                                 <div className="card card-disposition">
                                     <img src="https://via.placeholder.com/150" className="card-img-top" alt="..." />
@@ -177,7 +185,7 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*/}
             </div>
         </>
     );

@@ -1,0 +1,52 @@
+#card-dispositon-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 10px 50px 10px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+#card-sports {
+    width: 47%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s;
+    margin: 30px;
+}
+
+#card-sports:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.description-card-container {
+padding-top: 20px;
+padding-bottom: 10px;
+}
+
+.contact-container {
+    padding-top: 20px;
+
+}
+
+.card-text {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+    color: #333;
+}
