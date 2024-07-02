@@ -8,57 +8,65 @@ function Login() {
     const [AuthenticationBadData, setAuthenticationBadData] = useState(false);
     const [AuthenticationWithoutData, setAuthenticationWithoutData] = useState(false);
 
-// Función para manejar datos incorrectos con temporizador
-const handleBadData = () => {
-  setAuthenticationBadData(true);
-  setTimeout(() => {
-    // Aquí, en lugar de simplemente ocultar el mensaje, inicia la animación
-    document.getElementById("badDataMessage").classList.add("fade-out");
-    setTimeout(() => {
-      setAuthenticationBadData(false); // Finalmente, oculta el mensaje después de la animación
-    }, 3000); // Asegúrate de que este temporizador coincida con la duración de tu animación
-  }, 3000);
-};
+    // Función para manejar datos incorrectos con temporizador
+    const handleBadData = () => {
+      setAuthenticationBadData(true);
+      setTimeout(() => {
+        // Aquí, en lugar de simplemente ocultar el mensaje, inicia la animación
+        document.getElementById("badDataMessage").classList.add("fade-out");
+        setTimeout(() => {
+          setAuthenticationBadData(false); // Finalmente, oculta el mensaje después de la animación
+        }, 3000); // Asegúrate de que este temporizador coincida con la duración de tu animación
+      }, 3000);
+    };
 
-// Función para manejar la ausencia de datos con temporizador
-const handleWithoutData = () => {
-  setAuthenticationWithoutData(true);
-  setTimeout(() => {
-    // Inicia la animación para desvanecer
-    document.getElementById("withoutDataMessage").classList.add("fade-out");
-    setTimeout(() => {
-      setAuthenticationWithoutData(false); // Oculta el mensaje después de la animación
-    }, 3000); // Coincide con la duración de la animación
-  }, 3000);
-};
+    // Función para manejar la ausencia de datos con temporizador
+    const handleWithoutData = () => {
+      setAuthenticationWithoutData(true);
+      setTimeout(() => {
+        // Inicia la animación para desvanecer
+        document.getElementById("withoutDataMessage").classList.add("fade-out");
+        setTimeout(() => {
+          setAuthenticationWithoutData(false); // Oculta el mensaje después de la animación
+        }, 3000); // Coincide con la duración de la animación
+      }, 3000);
+    };
 
-const handleLogin = () => {
-  if (!userName || !userPassword) {
-    handleWithoutData();
-  } else if (userName === "corpus" && userPassword === "12345678") {
-    navigate('/adminDashboard');
-  } else if (userName === "edith" && userPassword === "12345678") {
-    navigate('/userDashboard');
-  } else if (userName === "emilio" && userPassword === "12345678") {
-    navigate('/teacherDashboard');
-  } else {
-    handleBadData();
-  }
-};
-  
+    const handleLogin = () => {
+      if (!userName || !userPassword) {
+        handleWithoutData();
+      } else if (userName === "corpus" && userPassword === "12345678") {
+        navigate('/adminDashboard');
+      } else if (userName === "edith" && userPassword === "12345678") {
+        navigate('/userDashboard');
+      } else if (userName === "emilio" && userPassword === "12345678") {
+        navigate('/teacherDashboard');
+      } else {
+        handleBadData();
+      }
+    };
+
+    
+    const handleKeyDown = (event) => {
+      if (event.key === 'Enter') {
+        handleLogin();
+      }
+    };
+    
+    
 
     return (
         <>
             {/* CONTENEDOR PRINCIPAL DEL FORMULARIO DE LOGIN */}
             <div className="logincontainer">
-                <div className="row">
-                    <div className="col-md-6 offset-md-3">
+               
+                    <div className="col-md-4 offset-md-4">
                         {/* TARJETA DE LOGIN */}
                         <div className="card my-5">
-                            <div className="card-body cardbody-color p-lg-5">
+                            <div className="card-body cardbody-color p-lg-3">
                                 <div className="text-center">
                                     {/* IMAGEN DEL PERFIL */}
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1.webp" className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3 avatar-style" width="200px" alt="profile"/>
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1.webp" className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3 avatar-style" width="150px" alt="profile"/>
                                 </div>
                                 {/* CAMPO DE USERNAME */}
                                 <div className="mb-3">
@@ -68,6 +76,7 @@ const handleLogin = () => {
                                         placeholder="Username"
                                         value={userName}
                                         onChange={(e) => setUserName(e.target.value)}
+                                        onKeyDown={handleKeyDown}
                                     />                                
                                 </div>
                                 {/* CAMPO DE PASSWORD */}
@@ -78,6 +87,7 @@ const handleLogin = () => {
                                         placeholder="Password"
                                         value={userPassword}
                                         onChange={(e) => setUserPassword(e.target.value)}
+                                        onKeyDown={handleKeyDown}
                                     />                                
                                 </div>
 
@@ -114,7 +124,7 @@ const handleLogin = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                
             </div>
         </>
     );
