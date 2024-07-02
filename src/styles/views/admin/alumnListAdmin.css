@@ -1,0 +1,16 @@
+.table-container {
+    margin: 60px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
+
+.btn-list-disposition {
+    margin-bottom: 50px;
+    margin-top: 30px;
+    
+}

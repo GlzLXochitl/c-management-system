@@ -1,0 +1,86 @@
+.fade-out {
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.alert-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#alert-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  
+}
+
+#alert-container {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  padding: 0 20px;
+  top: 100px;
+  right: 0;
+  z-index: 9999;
+}
+
+
+
+#alert-message {
+  font-size: 16px;
+}
+
+/* ESTILOS PARA AVATAR */
+.avatar-style {
+  border: none;
+}
+
+.withoutDataMessage {
+  display: flex;
+}
+
+/* ESTILOS PARA BOTÓN DE INICIO DE SESIÓN */
+.btn-login-style {
+  background-color: #212529;
+  color: white; 
+  border: none;
+  border-radius: 10px;
+  padding: 10px; 
+  width: 100%; 
+  margin-top: 0px; 
+  margin-bottom: 30px; 
+}
+
+.btn-login-style:hover {
+  background-color: #797c81;
+  color: white; 
+  font-weight: bold; 
+  border: none;
+}
+
+/* ESTILOS PARA ENLACE DE CREACIÓN DE CUENTA */
+.create-account-style {
+  color: #212529; 
+  font-weight: bold; 
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.create-account-style:hover {
+  color: #0056b3;
+}
