@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom';
 function UserDashboard() {
     return (
         <>
-            <div>
+            <div className=''>
                 {/*JUMBOTRON PRINCIPAL*/}
                 <div className="jumbotron jumbotron-fluid" id="jumbotron">
                     <div className="container">
 
                         {/*success alert for notifications*/}
-                        <div class="alert alert-success text-left alert-dismissible fade show alert-click" role="alert">
+                        {/*<div class="alert alert-success text-left alert-dismissible fade show alert-click" role="alert">
                             <div className='menssage-notification-alert'>
                                 <strong>Hola Edith!</strong><span className='menssage-alert'>Tienes una notificación.</span> <strong><Link to="/notifications" className="nav-link link-style"> Da click aqui para ver tus notificaciones.</Link></strong> 
                             </div>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
+                        </div>*/}
 
                         <div className="row">
                             <div className="col-lg-4">
@@ -36,10 +36,10 @@ function UserDashboard() {
                         <div className="container">
                             <div className="row">
                                 <div className="offerd-description">
-                                    <div className='col-lg-6'>
+                                    <div className='row-lg-6'>
                                         <img src="/images/designer.png" className="img-fluid img-disposition" alt="" />
                                     </div>
-                                    <div className='col-lg-6'>
+                                    <div className='row-lg-6'>
                                         <h2 className="title-offer">¿Que te ofrece la Universidad Metropolitana?</h2>
                                         <p className="text-offer">
                                             {/* placeholder text for offer description */}

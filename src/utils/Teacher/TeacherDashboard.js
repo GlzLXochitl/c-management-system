@@ -1,11 +1,11 @@
 import React from 'react';
 
-import '../../styles/views/teacher/headerTeacher.css';
+import '../../styles/layout/header.css';
 import '../../styles/views/teacher/teacherDashboard.css';
 import '../../styles/views/teacher/cardSportTeacher.css';
 import '../../styles/layout/footer.css';
 
-import AppHeaderTeacher from '../../components/Teacher/HeaderTeacher.jsx';
+import AppHeader from '../../components/Common/Header.jsx';
 import AppTeacherDashboard from '../../components/Teacher/TeacherDashboard.jsx';
 import AppCardSportTeacher from '../../components/Teacher/CardSportTeacher.jsx';
 import AppFooter from '../../components/Common/Footer.jsx';
@@ -13,7 +13,7 @@ import AppFooter from '../../components/Common/Footer.jsx';
 function TeacherDashboard() {
   return (
       <>
-        <AppHeaderTeacher />
+        <AppHeader />
         <AppTeacherDashboard /> 
         <AppCardSportTeacher /> 
         <AppFooter />

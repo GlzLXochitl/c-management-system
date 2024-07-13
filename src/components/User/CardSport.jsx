@@ -7,7 +7,7 @@ function CardSport() {
     });
 
     const handleButtonClick = () => {
-    
+        alert('Hola');
       setButtonState({
         text: 'Solicitud enviada',
         backgroundColor: 'btn-success' 

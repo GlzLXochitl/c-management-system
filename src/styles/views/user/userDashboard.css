@@ -1,15 +1,35 @@
 /* BODY */
 
-/* JUMBOTRON: Full screen background section with centered content */
+/* JUMBOTRON: Full screen background section with centered content 
 #jumbotron {
+  position: relative; /* Asegura que el pseudo-elemento se posicione correctamente 
   background-size: cover;
   background-position: center;
-  height: 100vh; /* full viewport height */
+  height: 100vh; /* full viewport height 
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: url(../../../../public/images/futFondo.png);
 }
+
+#jumbotron::before {
+  content: ""; /* Necesario para que el pseudo-elemento se muestre 
+  position: absolute; /* Posiciona el pseudo-elemento sobre #jumbotron 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% 
+  z-index: -1; /* Asegura que el fondo esté detrás del contenido 
+}*/
+
+  
+  /* Asegúrate de que el contenido del jumbotron no sea afectado por la opacidad */
+  .jumbotron .container {
+    position: relative;
+    z-index: 1;
+  }
 
 .color-welcome {
     color: #212529 !important;
@@ -24,18 +44,18 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .menssage-alert {
-    margin-left: 5px;
+    margin-left: 5%;
 }
 
 .link-style {
     color: #155724;
     text-decoration: none;
-    margin-left: -12px;
+    margin-left: -12%;
 }
 
 /* BIENVENIDA: Welcome content section */
@@ -48,55 +68,55 @@
 }
 
 .title-offer {
-    font-size: 60px;
+    font-size: 60%;
     font-weight: bold;
-    padding-top: 0px;
-    padding-bottom: 30px;
+    padding-top: 0%;
+    padding-bottom: 30%;
     text-align: right;
    
 }
 
 .text-offer {
-    font-size: 15px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    font-size: 15%;
+    padding-bottom: 30%;
+    padding-left: 20%;
+    padding-right: 20%;
     text-align: right;
 }
 
 .img-disposition {
     display: block;
-    width: 300px;
-    height: 300px;
+    width: 300%;
+    height: 300%;
     margin: auto; /* center image */
     
 }
 
 /* TALLERES CULTURALES: Cultural workshops section */
 .courses-title {
-    font-size: 30px;
+    font-size: 30%;
     font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 100px;
+    margin-top: 0%;
+    margin-bottom: 100%;
     color: #3a3d44;
 }
 
 /* TALLERES CULTURALES: CARDS */
 .card {
-    border-radius: 10px; /* rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    border-radius: 10%; /* rounded corners */
+    box-shadow: 0 0 10% rgba(0, 0, 0, 0.1);
+    margin-bottom: 30%;
 }
 
 .cards-disposition {
-    margin-top: 0px;
-    margin-bottom: 25px;
+    margin-top: 0%;
+    margin-bottom: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .card-disposition {
@@ -104,16 +124,16 @@
 }
 
 #sports-container {
-    margin-bottom: 50px;
+    margin-bottom: 50%;
 }
 
 .btn-style {
     background-color: #212529; /* dark background color */
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    border-radius: 5%;
+    padding: 10% 20%;
+    font-size: 16%;
     cursor: pointer;
 }
 
@@ -121,10 +141,10 @@
     background-color: #6c757d; /* darker background color */
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024%) {
     .col-lg-4 {
         h1 {
-            font-size: 35px;
+            font-size: 35%;
         }
     }
 }

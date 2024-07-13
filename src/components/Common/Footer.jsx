@@ -47,7 +47,7 @@ function Footer() {
                 </p>
               </div>
             </div>
-            <hr className="line" /> {/* horizontal line */}
+            {/*<hr className="line" /> horizontal line */}
             {/* BLOQUE CON REDES SOCIALES Y COPYRIGHT */}
             <div className="redes">
               <div className="col-md-6 d-flex align-items-center">
