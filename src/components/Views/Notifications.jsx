@@ -5,7 +5,7 @@ function Notifications() {
             <div className="content">
                 <div>
                     <div className="row">
-                        <div className="container">
+                        <div className="container-notis">
                             {/* CONTENEDOR PRINCIPAL */}
                             <div className="jumbotron" id="jumbotron-notifications">
                                 {/* ENCABEZADO */}
