@@ -91,7 +91,7 @@ function UserDashboard() {
                         <img className="d-block w-100 carousel-img" src="/images/carrusel/voli.jpeg" alt="Voleibol" />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Voleibol</h5>
-                            <p>Únete a nuestro equipo de voleibol.</p>
+                            <p>Únete a nuestro equipo de voleibol</p>
                         </div>
                     </div>
                 </div>
