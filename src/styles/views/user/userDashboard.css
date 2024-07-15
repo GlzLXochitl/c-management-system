@@ -1,150 +1,184 @@
 /* BODY */
 
-/* JUMBOTRON: Full screen background section with centered content 
+/* JUMBOTRON: Full screen background section with centered content */
+
 #jumbotron {
-  position: relative; /* Asegura que el pseudo-elemento se posicione correctamente 
+  position: relative;
+  background-image: url('../../../../public/images/Welcome.jpeg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* full viewport height 
+  margin-top: 0; /* Elimina el margen superior */
+  padding-top: 0; /* Elimina el padding superior si es necesario */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  background-image: url(../../../../public/images/futFondo.png);
 }
 
 #jumbotron::before {
-  content: ""; /* Necesario para que el pseudo-elemento se muestre 
-  position: absolute; /* Posiciona el pseudo-elemento sobre #jumbotron 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Color negro con opacidad del 50% 
-  z-index: -1; /* Asegura que el fondo esté detrás del contenido 
-}*/
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(53, 191, 174, 0.5); /* Corregido para aplicar opacidad */
+    background-size: cover;
+    background-position: center;
+}
 
   
-  /* Asegúrate de que el contenido del jumbotron no sea afectado por la opacidad */
   .jumbotron .container {
     position: relative;
     z-index: 1;
   }
-
-.color-welcome {
-    color: #212529 !important;
-    font-weight: 500;
+  
+  .color-welcome {
+    color: #343a40 !important;
+    font-weight: 600;
+  }
+  
+/* Estilos para centrar .offer en el centro de la pantalla */
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* Asegura que el contenedor tenga el alto de la pantalla */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding-top: 0; /* Ajustado a 0 para quitar el borde superior */
+  margin-top: 0;;
+  padding-bottom: 0; /* Ajustado a 0 para quitar el borde inferior */
+  background-color: white;
 }
 
-.alert-click {
+.offer-img {
+  max-width: 100%;
+  height: auto; /* Ajusta la altura automáticamente */
+  opacity: 0.5; /* Aplica opacidad a la imagen completa */
+ 
+}
+
+/* Estilos adicionales para el texto */
+.offer h2 {
+    margin-bottom: 5px; /* Espacio entre el título y el párrafo */
+    font-size: 2rem; /* Tamaño del título */
+    font-weight: 700;
+    color: #343a40;
+}
+  
+.offer p {
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: 400; /* Grosor de la fuente */
+  line-height: 1.5; /* Altura de línea */
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  
+}
+
+.offer-text {
+  padding-top: 0;
+  padding-bottom: 50px;
+
+}
+
+.lead {
+    background-color: #1B5A7D;
+    color: white;
+    font-weight: 300;
+}
+
+/* Estilos generales para el carrusel */
+.carousel-img {
+  height: 400px; /* Tamaño para escritorio */
+  object-fit: cover; /* Recorta la imagen si es más grande que el contenedor */
+}
+
+@media (max-width: 768px) {
+  /* Estilos para dispositivos móviles */
+  .carousel-img {
+      height: auto;
+      width: 100vw; /* Ancho completo de la pantalla */
+      object-fit: cover; /* Recorta la imagen si es más grande que el contenedor */
+  }
+}
+
+/* Ajuste adicional para que el contenedor del carrusel ocupe el 100% del ancho en móviles */
+@media (max-width: 768px) {
+  #carouselExampleControls {
+      width: 100vw; /* Ancho completo de la pantalla */
+  }
+}
+
+
+
+
+
+
+
+
+
+  
+  /* .alert-click {
     cursor: pointer;
-}
-
-.menssage-notification-alert {
+  }
+  
+  .menssage-notification-alert {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 20%;
     padding-right: 20%;
-}
-
-.menssage-alert {
+  }
+  
+  .menssage-alert {
     margin-left: 5%;
-}
-
-.link-style {
+  }
+  
+  .link-style {
     color: #155724;
     text-decoration: none;
     margin-left: -12%;
-}
-
-/* BIENVENIDA: Welcome content section */
-#jumbotron-offer {
+  } */
+  
+  /* BIENVENIDA: Welcome content section */
+  #jumbotron-offer {
     background-color: white;
-}
-
-.offerd-description {
+  }
+  
+  .offerd-description {
     display: flex;
-}
-
-.title-offer {
+  }
+  
+  .title-offer {
     font-size: 60%;
     font-weight: bold;
     padding-top: 0%;
     padding-bottom: 30%;
     text-align: right;
-   
-}
-
-.text-offer {
+  }
+  
+  .text-offer {
     font-size: 15%;
     padding-bottom: 30%;
     padding-left: 20%;
     padding-right: 20%;
     text-align: right;
-}
-
-.img-disposition {
+  }
+  
+  .img-disposition {
     display: block;
     width: 300%;
     height: 300%;
     margin: auto; /* center image */
-    
-}
-
-/* TALLERES CULTURALES: Cultural workshops section */
-.courses-title {
-    font-size: 30%;
-    font-weight: bold;
-    margin-top: 0%;
-    margin-bottom: 100%;
-    color: #3a3d44;
-}
-
-/* TALLERES CULTURALES: CARDS */
-.card {
-    border-radius: 10%; /* rounded corners */
-    box-shadow: 0 0 10% rgba(0, 0, 0, 0.1);
-    margin-bottom: 30%;
-}
-
-.cards-disposition {
-    margin-top: 0%;
-    margin-bottom: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-.card-disposition {
-    width: 18rem; /* fixed width for cards */
-}
-
-#sports-container {
-    margin-bottom: 50%;
-}
-
-.btn-style {
-    background-color: #212529; /* dark background color */
-    color: white;
-    border: none;
-    border-radius: 5%;
-    padding: 10% 20%;
-    font-size: 16%;
-    cursor: pointer;
-}
-
-.btn-style:hover {
-    background-color: #6c757d; /* darker background color */
-}
-
-@media (max-width: 1024%) {
+  }
+  
+  @media (max-width: 1024%) {
     .col-lg-4 {
-        h1 {
-            font-size: 35%;
-        }
+      h1 {
+        font-size: 35%;
+      }
     }
-}
+  }
+  

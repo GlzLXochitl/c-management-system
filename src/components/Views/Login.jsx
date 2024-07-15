@@ -1,5 +1,6 @@
 import React, { useState } from 'react';  // Importar el hook useState
 import { useNavigate } from 'react-router-dom';  // Importar el hook useNavigate
+import { Link } from 'react-router-dom';
 
 function Login() {
     const [userName, setUserName] = useState('');
@@ -62,7 +63,7 @@ function Login() {
                
                     <div className="col-md-4 offset-md-4">
                         {/* TARJETA DE LOGIN */}
-                        <div className="card my-5">
+                        <div className="card card-login my-5">
                             <div className="card-body cardbody-color p-lg-3">
                                 <div className="text-center">
                                     {/* IMAGEN DEL PERFIL */}
@@ -119,7 +120,7 @@ function Login() {
                                 {/* TEXTO DE REGISTRO Y MÁS INFORMACIÓN */}
                                 <div id="emailHelp" className="form-text text-center mb-5 text-dark">
                                     Not Registered? <br/>
-                                    <a href="#!" className="text-dark fw-bold create-account-style"> More information</a>
+                                    <Link to="/loginNotRegistered" className=" create-account-style"> More information</Link>
                                 </div>
                             </div>
                         </div>

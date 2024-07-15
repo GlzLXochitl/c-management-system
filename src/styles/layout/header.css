@@ -4,18 +4,88 @@
   user-select: none;
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 1.5rem;
+.nav-color {
+  background-color: #1B5A7D !important;
 
-  }
-}
-
-body {
-  padding-top: 3.5rem;
 }
 
 .menu {
-  background-color: #dfe5e7 !important;
+  background-color: #1B5A7D !important;
+  color: #9a9da0 !important;
 }
+
+.menu-op {
+  background-color: #1B5A7D !important;
+  color: #9a9da0 !important;
+  font-weight: bold;
+}
+
+.menu a {
+  color: #9a9da0 !important;
+}
+
+.menu a:hover {
+  color: #fff !important;
+}
+
+.navbar {
+  padding: 5px;
+  padding-right: 20px;
+  padding-left: 10px;
+  align-items: center;
+} 
+
+#logout {
+  font-weight: bold;
+  border-radius: 10%;
+  border: #9a9da0 solid 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: flex; /* Añadido para permitir el centrado flex */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+#logout:hover {
+  color: #cf2c4a !important;
+  background-color: #cf2c4a31 !important;
+}
+
+#logout.touch {
+  color: #cf2c4a !important;
+  background-color: #cf2c4a31 !important;
+}
+
+.logotype-border {
+  border: none;
+  border-radius: 10%; /* Esto crea un círculo perfecto */
+  padding: 3px;
+  margin-right: 10px;
+  background-color: white;
+
+}
+
+@media (min-width: 768px) {
+
+  body {
+    padding-top: 3.5rem;
+  }
+         
+  .bd-placeholder-img-lg {
+    font-size: 1.5rem;
+  }
+  
+}
+
+@media (min-width: 1024px) {
+  
+  body {
+    padding-top: 3.5rem; 
+  }
+
+
+
+}
+
+
 

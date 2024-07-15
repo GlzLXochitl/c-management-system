@@ -2,6 +2,15 @@
   animation: fadeOut 3s forwards;
 }
 
+.card-login {
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+
+}
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -55,7 +64,7 @@
 
 /* ESTILOS PARA BOTÓN DE INICIO DE SESIÓN */
 .btn-login-style {
-  background-color: #212529;
+  background-color: #1B5A7D;
   color: white; 
   border: none;
   border-radius: 10px;
@@ -66,21 +75,22 @@
 }
 
 .btn-login-style:hover {
-  background-color: #797c81;
+  background-color: #C30E2E;
   color: white; 
-  font-weight: bold; 
   border: none;
 }
 
 /* ESTILOS PARA ENLACE DE CREACIÓN DE CUENTA */
 .create-account-style {
-  color: #212529; 
+  text-decoration: none;
+  color: #1B5A7D; 
   font-weight: bold; 
   text-align: center;
   margin-top: 10px;
-  text-decoration: none;
 }
 
 .create-account-style:hover {
-  color: #0056b3;
+  color: #C30E2E;
+  text-decoration: none;
 }
+

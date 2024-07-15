@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import AppLogin from '../src/utils/Common/Login.js';
+import AppLoginNotRegistered from '../src/utils/Common/LoginNotRegistered.js';
 
 import AppUserDashboard from '../src/utils/User/UserDashboard.js';
 import AppProfile from '../src/utils/User/Profile.js';
@@ -29,6 +30,7 @@ root.render(
       <Routes>
 
         <Route path="/" element={<AppLogin />} />
+        <Route path="/loginNotRegistered" element={<AppLoginNotRegistered />} />
 
         <Route path="/userDashboard" element={<AppUserDashboard />} />
         <Route path="/profile" element={<AppProfile />} />

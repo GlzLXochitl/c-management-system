@@ -17,19 +17,13 @@ function Footer() {
                     <div className="utma">
                       TECNOLOGICA METROPOLITNA DE AGUASCALIENTES
                     </div>
-                    <div className="slogan">
-                      Alta Tecnologia {/* slogan */}
-                    </div>
+                   
                   </div>
                 </div>
-                <p className="footer-text">
-                  Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                  consectetur adipisicing elit. {/* footer text */}
-                </p>
+                
               </div>
               {/* COLUMNA CON INFORMACIÓN DE CONTACTO */}
               <div className="contact-disposition uper col-md-10 col-lg-8 col-xl-4 mb-md-0 mb-4">
-                <h6 className="contact text-uppercase fw-bold mb-4">Contacto</h6> {/* contact title */}
                 <p>
                   <i className="fas fa-phone me-3"></i>
                   <span className="details">Dirección:</span> 
@@ -40,11 +34,7 @@ function Footer() {
                   <span className="details">Teléfono:</span> 
                   <p>449 925 3920</p> {/* phone number */}
                 </p>
-                <p>
-                  <i className="fas fa-print me-3"></i>
-                  <span className="details">Horario:</span> 
-                  <p>De las 8 a.m. a las 9 p.m. lun-vie</p> {/* opening hours */}
-                </p>
+                
               </div>
             </div>
             {/*<hr className="line" /> horizontal line */}

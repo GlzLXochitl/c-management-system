@@ -1,6 +1,6 @@
 .footer-tree {
   background-color: rgba(233, 236, 239, 1);
-  color: #333333;
+  color: #9a9da0;
 }
 
 footer {
@@ -14,15 +14,38 @@ footer {
   margin-right: 20px;
 }
 
+.utma {
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.slogan {
+  font-weight: 400;
+  margin-bottom: 1rem;
+
+}
+
+.footer-text {
+  font-weight: 400;
+
+
+}
+
 .footer-complet {
   background-color: rgb(233, 236, 239);
   width: 100%;
   height: auto;
 }
 
+.text-contact {
+  font-weight: 500;
+  
+
+}
+
 .line {
   border-top: 1px solid rgb(9, 72, 76);
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 20px;
   margin-left: -50px;
   margin-right: -50px;
@@ -30,10 +53,11 @@ footer {
 }
 
 .footer-complet-contact {
-  background-color: rgb(233, 236, 239);
+  background-color: #1B5A7D;
   margin-bottom: 0px;
   padding-top: 30px;
   /* footer contact section with padding at the top */
+  color: #9a9da0;
 }
 
 .footer-information {
@@ -84,3 +108,11 @@ footer {
   /* card styling for students with hover effects and rounded corners */
 } 
 
+.logotype {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 5px;
+}

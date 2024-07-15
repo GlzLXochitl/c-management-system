@@ -1,82 +1,22 @@
-#card-dispositon-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 10px 50px 10px;
-    justify-content: center;
+.card-cardsport {
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.card-text-info {
     padding: 0;
-    list-style: none;
-}
-
-#card-sports {
-    width: 47%;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all 0.3s;
-    margin: 15px;
-}
-
-#card-sports:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-title {
-    padding: 0px;
-    margin: 0px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333;
-}
-
-.description-card-container {
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-
-.contact-container {
-    padding-top: 20px;
-
-}
-
-.card-text {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
     font-size: 1rem;
-    color: #333;
+    text-align: justify;
 }
 
-.availability {
-    display: flex;
-    align-items: center;
-}
-
-.sport-status-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    align-items: center;
-    margin: 10px;
-}
-
-#inscripcionesAbiertas {
-    color: #03a303;
-    font-weight: 900;
-    text-shadow: 2px 2px 4px #a0e0bc ; 
-    margin-left: 10px;
-
-}
-
-.card-img-top {
-    background-size: 1rem 1rem; /* Ajusta el tamaño de la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 1rem; /* Ajusta la altura del contenedor al tamaño deseado */
-    width: 1rem; /* Ajusta el ancho del contenedor al tamaño deseado */
+.text-container-details {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    text-align: justify;
+    margin-top: 1rem;
 }
 
 #card-img-bottom {
