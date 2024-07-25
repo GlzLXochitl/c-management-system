@@ -1,0 +1,106 @@
+.card-cardsport {
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px 0.1px #D7DEE4;
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}
+
+.card-text-info {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.text-container-details {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+#card-img-bottom {
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-size: cover; /* Cubre completamente el contenedor, puede recortar la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 650px; /* Ajusta la altura del contenedor según necesites */
+}
+
+.cardImageContainer{
+  display: flex;
+  justify-content: center;
+  height: 45vh;
+  width: auto;
+  overflow: hidden;
+}
+.cardImageContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-card-style-card-sport-apply {
+  background-color: #1B5A7D;
+  color: #D7DEE4; 
+  border: none;
+  padding: 10px; 
+  width: 100%; 
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.btn-card-style-card-sport-apply:hover {
+  background-color: #C30E2E;
+  color: #D7DEE4; 
+  border: none;
+}
+
+
+
+/*.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+}*/
+
+.card-body-sports {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.card-body-sports-img {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+
+@media (max-width: 768px) {
+  .card-text-info {
+    letter-spacing: 0;
+    line-height: 1.3rem;
+    text-align: left;
+}
+.text-container-details {
+    letter-spacing: 0;
+    line-height: 1.3rem;
+    font-size: 1rem;
+    text-align: left;
+}
+  .cardImageContainer{
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+    width: auto;
+    overflow: hidden;
+  }
+  .cardImageContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

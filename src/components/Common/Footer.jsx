@@ -40,10 +40,7 @@ function Footer() {
             {/*<hr className="line" /> horizontal line */}
             {/* BLOQUE CON REDES SOCIALES Y COPYRIGHT */}
             <div className="redes">
-              <div className="col-md-6 d-flex align-items-center">
-                <span className="mb-3 mb-md-0 text-muted">&copy; 2024 Company, Inc</span> {/* copyright */}
-              </div>
-              <ul className="nav col-md-6 justify-content-end list-unstyled d-flex">
+              <ul className="nav col-md-6 justify-content-center list-unstyled d-flex">
                 <li>
                   <a href="https://utma.edu.mx" target="blank">
                     <img className="utma-footer" src="images/utmaLogotype.png" alt="UTMA" /> {/* UTMA logo link */}
@@ -66,6 +63,11 @@ function Footer() {
                 </li>
               </ul>
             </div>
+            <div className="Copyright">
+            <div className="col-md-6 d-flex align-items-center justify-content-center list-unstyled d-flex">
+                <span className="mb-3 mb-md-0 text-muted">&copy; 2024 Company, Inc</span> {/* copyright */}
+              </div>
+              </div>
           </div>
         </div>
     );

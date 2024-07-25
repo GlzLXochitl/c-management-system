@@ -36,11 +36,11 @@ function Login() {
     const handleLogin = () => {
       if (!userName || !userPassword) {
         handleWithoutData();
-      } else if (userName === "corpus" && userPassword === "12345678") {
+      } else if (userName === "corpus" && userPassword === "1234") {
         navigate('/adminDashboard');
-      } else if (userName === "edith" && userPassword === "12345678") {
+      } else if (userName === "edith" && userPassword === "1234") {
         navigate('/userDashboard');
-      } else if (userName === "emilio" && userPassword === "12345678") {
+      } else if (userName === "emilio" && userPassword === "1234") {
         navigate('/teacherDashboard');
       } else {
         handleBadData();
@@ -59,12 +59,12 @@ function Login() {
     return (
         <>
             {/* CONTENEDOR PRINCIPAL DEL FORMULARIO DE LOGIN */}
-            <div className="logincontainer">
-               
+            
                     <div className="col-md-4 offset-md-4">
                         {/* TARJETA DE LOGIN */}
                         <div className="card card-login my-5">
-                            <div className="card-body cardbody-color p-lg-3">
+                          
+                            <div className="cardbody-color card-content-disposition-login p-lg-3">
                                 <div className="text-center">
                                     {/* IMAGEN DEL PERFIL */}
                                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1.webp" className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3 avatar-style" width="150px" alt="profile"/>
@@ -125,8 +125,7 @@ function Login() {
                             </div>
                         </div>
                     </div>
-                
-            </div>
+            
         </>
     );
 }

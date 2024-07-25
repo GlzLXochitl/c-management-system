@@ -1,5 +1,4 @@
 /* BODY */
-
 /* JUMBOTRON: Full screen background section with centered content */
 
 #jumbotron {
@@ -37,39 +36,41 @@
     color: #343a40 !important;
     font-weight: 600;
   }
+
+
   
 /* Estilos para centrar .offer en el centro de la pantalla */
-.offer {
+/*.offer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh; /* Asegura que el contenedor tenga el alto de la pantalla */
-  text-align: center; /* Centra el texto horizontalmente */
-  padding-top: 0; /* Ajustado a 0 para quitar el borde superior */
-  margin-top: 0;;
-  padding-bottom: 0; /* Ajustado a 0 para quitar el borde inferior */
+  height: 62.5vh; /* Asegura que el contenedor tenga el alto de la pantalla 
+  text-align: center; /* Centra el texto horizontalmente 
   background-color: white;
+}*/
+.logoStyle{
+  text-align: center;
 }
-
 .offer-img {
-  max-width: 100%;
-  height: auto; /* Ajusta la altura automáticamente */
-  opacity: 0.5; /* Aplica opacidad a la imagen completa */
- 
+  width: 300px;
+  height: auto;
+  opacity: 0.5;
 }
 
 /* Estilos adicionales para el texto */
 .offer h2 {
-    margin-bottom: 5px; /* Espacio entre el título y el párrafo */
-    font-size: 2rem; /* Tamaño del título */
-    font-weight: 700;
-    color: #343a40;
+  font-size: 1.5rem; /* Tamaño del texto */
+  font-weight: 700; /* Grosor de la fuente */
+  line-height: 1.5; /* Altura de línea */
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
 }
   
 .offer p {
-  font-size: 16px; /* Tamaño del texto */
-  font-weight: 400; /* Grosor de la fuente */
+  font-size: 1rem; /* Tamaño del texto */
+  font-weight: 500; /* Grosor de la fuente */
   line-height: 1.5; /* Altura de línea */
   padding-left: 10%;
   padding-right: 10%;
@@ -78,7 +79,7 @@
 }
 
 .offer-text {
-  padding-top: 0;
+
   padding-bottom: 50px;
 
 }
@@ -94,13 +95,21 @@
   height: 400px; /* Tamaño para escritorio */
   object-fit: cover; /* Recorta la imagen si es más grande que el contenedor */
 }
-
+.offer{
+  justify-content: center;
+  height: auto;
+}
 @media (max-width: 768px) {
-  /* Estilos para dispositivos móviles */
+  .offer-img {
+    width: 100%;
+  }
   .carousel-img {
-      height: auto;
-      width: 100vw; /* Ancho completo de la pantalla */
+      height: 45vh;
+      width: 65vw; /* Ancho completo de la pantalla */
       object-fit: cover; /* Recorta la imagen si es más grande que el contenedor */
+  }
+  .display-4{
+    font-size: 50px;
   }
 }
 
@@ -161,7 +170,6 @@
   
   .text-offer {
     font-size: 15%;
-    padding-bottom: 30%;
     padding-left: 20%;
     padding-right: 20%;
     text-align: right;

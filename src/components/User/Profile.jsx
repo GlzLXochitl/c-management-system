@@ -45,8 +45,8 @@ function Profile() {
                                         Creditos: 40
                                     </h1>
                                 </div>
-                                <div>
-                                    <button type="button" className="btn btn-primary btn-lg" id='btn-style'>Descargar constancia</button>
+                                <div className='center-button'>
+                                    <button type="button" className="btn btn-primary btn-lg" id='btn-constancia-style'>Descargar constancia</button>
                                 </div>
                                
                             </div>
@@ -90,20 +90,20 @@ function Profile() {
                                         {/* BODY: EXTRACURRICULAR ACTIVITY */}
                                         <h5 className="mb-4"> Actividad extracurricular </h5>
                                         <div className='disposition'>
-                                            <div className='list'>
+                                            <div className='listMain'>
                                                 <div className='camp-space'><span className="camp-design">Actividad</span></div>
                                                 <div className='camp-space'><span className="camp-design">Tallerista</span></div>   
                                                 <div className='camp-space'><span className="camp-design">Email de tallerista</span></div>
                                                 <div className='camp-space'><span className="camp-design">Duración</span></div> 
                                                 <div className='camp-space'><span className="camp-design">Horario</span></div> 
                                             </div>
-                                            <div className="list">                                            
+                                            <div className="listDetails">                                            
                                                 <div className='camp-space'><span className='camp-text'>Cuidado de mascotas</span></div>                                            
                                                 <div className='camp-space'><span className='camp-text'>Juan Perez Cardona</span></div>                                            
                                                 <div className='camp-space'><span className='camp-text'>juan.cardona@utma.edu.mx</span></div>                                            
                                                 <div className='camp-space'><span className='camp-text'>{extracurricularAct.startedDate} - {extracurricularAct.finishedDate}</span></div>                                        
                                                 <div className='camp-space element-list text-muted mb-0 schedule-disposition'>
-                                                    <div className=''>
+                                                    <div className='days'>
                                                         <ul className="no-bullets">
                                                             <li>Monday</li>
                                                             <li>Tuesday</li>
@@ -114,7 +114,7 @@ function Profile() {
                                                             <li>Sunday</li>
                                                         </ul>
                                                     </div>
-                                                    <div>
+                                                    <div className='daysSchedule'>
                                                         <ul className="no-bullets">
                                                             <li>{extracurricularAct.scheduleLunes}</li>
                                                             <li>{extracurricularAct.scheduleMartes}</li>
@@ -138,7 +138,7 @@ function Profile() {
                                     <div className="card-body">
                                         <h5 className="mb-4">Datos escolares</h5>
                                         <div className='disposition'>
-                                            <div className='list'>
+                                            <div className='listMain'>
                                                 <div className='camp-space'><span className="camp-design">Matrícula</span></div>
                                                 <div className='camp-space'><span className="camp-design">Carrera</span></div>   
                                                 <div className='camp-space'><span className="camp-design">Cuatrimestre</span></div>
@@ -146,7 +146,7 @@ function Profile() {
                                                 <div className='camp-space'><span className="camp-design">Email institucional</span></div>   
                                              
                                             </div>
-                                            <div className="list">                                            
+                                            <div className="listData">                                            
                                                 <div className='camp-space'><span className='camp-text'>{studentData.studentNumber}</span></div>                                            
                                                 <div className='camp-space'><span className='camp-text'>Tecnologías de la informacion</span></div>                                            
                                                 <div className='camp-space'><span className='camp-text'>{studentData.semester}</span></div>                                            

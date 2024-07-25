@@ -22,7 +22,7 @@
 }
 
 /* ESTILOS PARA BOTÓN */
-#btn-style {
+#btn-constancia-style {
   background-color: #212529;
   color: white;
   border: none;
@@ -35,7 +35,7 @@
   right: -50px;
 }
 
-#btn-style:hover {
+#btn-constancia-style:hover {
   background-color: #6c757d;
 }
 
@@ -48,6 +48,10 @@
 /* ESTILOS PARA TUTOR AVATAR */
 .tutor-avatar {
   width: 150px;
+}
+.card {
+  box-shadow: 4px 4px 10px 0.1px #D7DEE4;
+  border-radius: 10px;
 }
 
 /* ESTILOS PARA LISTAS */
@@ -112,4 +116,47 @@
 /* ESTILOS PARA CONTACTO */
 .contact {
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 50px;
+  }
+  #jumbotron {
+    width: 100%;
+  }
+  .content {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #btn-constancia-style {
+    right: 0;
+    margin-right: 12vh;
+  }
+  .days{
+    margin-left: -30px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .daysSchedule{
+    margin-left: -25px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .disposition {
+    width: 275px;
+    .listMain { 
+      font-size: 11px;
+      line-height: 1.4rem;
+    }
+    .listDetails {
+      font-size: 11px;
+      line-height: 1.35rem;
+    }
+    .listData{
+      font-size: 11px;
+      line-height: 1.4rem;
+    }
+  }
 }
