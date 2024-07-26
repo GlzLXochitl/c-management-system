@@ -25,7 +25,13 @@ function Jumb() {
                     <div className="row">
                         <div className="col-lg-4 color-welcome">
                             <h1 className="display-4">
-                                <span className="text-primary color-welcome">Bienvenido </span> al <span className="text-primary color-welcome">lugar</span> de las <span className="text-primary color-welcome">oportunidades</span>
+                                {/*En esta parte el texto sera dependiendo el usuario con secion iniciada: 
+                                    * para el maestro sera: "Un placer trabajar contigo"
+                                    * para el alumno sera: "Bienvenido al lugar de las oportunidades"
+                                    * para el administrador sera: "Administración de talleres y deportes" -> Para este el tamaño de largo sera mas ajustado para mas estetica y mustrar una diferencia entre los otros usuarios y el administrador
+                                */}
+                                <span className="text-primary color-welcome">Bienvenido </span> al <span className="text-primary color-welcome">lugar</span> de las <span className="text-primary color-welcome">oportunidades</span> 
+                                
                             </h1>
                             <p className="lead">Universidad Tecnológica Metropolitana</p>
                         </div>

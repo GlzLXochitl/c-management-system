@@ -1,15 +1,12 @@
 import React from 'react';
-
-import '../../styles/views/common/login.css';
-
 import AppLogin from '../../components/Views/Login.jsx';
-
+import AppFooter from '../../components/Common/Footer.jsx';
 
 function Login() {
   return (
       <>
-        
         <AppLogin />
+        <AppFooter />
         
       </>
   );

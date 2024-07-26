@@ -1,23 +1,27 @@
 /* CONTENEDOR DEL TEXTO */
 #container-text {
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
     max-width: 800px;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     color: #333;
+}
+
+.elements-disposition p {
     text-align: justify;
-    margin-top: 80px;
+    margin-top: 1rem;
+}
+
+.elements-disposition h2 {
+    margin-top: 3rem;
 }
 
 /* FECHA DE PUBLICACIÓN */
 .date {
     font-size: 14px;
     color: #666;
-    margin-top: 20px;
-    text-align: right;
-    margin-right: 300px;
-    margin-top: 50px;
-    margin-bottom: 150px;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
 }

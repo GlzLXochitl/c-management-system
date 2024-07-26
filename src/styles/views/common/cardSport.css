@@ -8,25 +8,32 @@
 }
 
 .card-text-info {
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-    text-align: justify;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.card-text {
+  padding: 0px;
+  margin: 0px;
+  font-size: 1rem;
+  color: #333;
 }
 
 .text-container-details {
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-    text-align: justify;
-    margin-top: 1rem;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  text-align: justify;
+  margin-top: 1rem;
 }
 
 #card-img-bottom {
-    background-position: center; /* Centra la imagen en el contenedor */
-    background-size: cover; /* Cubre completamente el contenedor, puede recortar la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 650px; /* Ajusta la altura del contenedor según necesites */
+  background-position: center; /* Centra la imagen en el contenedor */
+  background-size: cover; /* Cubre completamente el contenedor, puede recortar la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 650px; /* Ajusta la altura del contenedor según necesites */
 }
 
 .cardImageContainer{
@@ -58,8 +65,6 @@
   border: none;
 }
 
-
-
 /*.cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -77,7 +82,6 @@
   margin-left: 0rem;
   margin-right: 0rem;
 }
-
 
 @media (max-width: 768px) {
   .card-text-info {
@@ -104,3 +108,26 @@
     object-fit: cover;
   }
 }
+
+
+
+.card-title {
+  padding: 0px;
+  margin: 0px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.description-card-container {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.card-img-top {
+  background-size: 1rem 1rem; /* Ajusta el tamaño de la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 1rem; /* Ajusta la altura del contenedor al tamaño deseado */
+  width: 1rem; /* Ajusta el ancho del contenedor al tamaño deseado */
+}
+

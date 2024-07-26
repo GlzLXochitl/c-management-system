@@ -16,7 +16,7 @@ import AppTeacherDashboard from '../src/utils/Teacher/TeacherDashboard.js';
 import AppAlumnListTeacher from '../src/utils/Teacher/AlumnListTeacher.js';
 
 import AppNotifications from '../src/utils/Common/Notifications.js';
-import AppPassword from '../src/utils/Common/Password.js';
+import AppchangePassword from '../src/utils/Common/changePassword.js';
 import AppPrivacy from '../src/utils/Common/Privacy.js';
 import AppHelp from '../src/utils/Common/Help.js';
 import AppComments from '../src/utils/Common/Comments.js';
@@ -43,7 +43,7 @@ root.render(
         <Route path="/alumnListTeacher" element={<AppAlumnListTeacher />} />
 
         <Route path="/notifications" element={<AppNotifications />} />
-        <Route path="/password" element={<AppPassword />} />
+        <Route path="/password" element={<AppchangePassword />} />
         <Route path="/privacy" element={<AppPrivacy />} />
         <Route path="/help" element={<AppHelp />} />
         <Route path="/comments" element={<AppComments />} />

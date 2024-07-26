@@ -10,6 +10,7 @@ export function Header() {
                         <a className="navbar-brand" href="#!" id="logotype">
                             <div className="logotype logotype-border">
                                 <div>
+                                    {/* En esta parte al precionar el boton te debolvera al dashboord del usuario correspondiente */}
                                     <img src="/images/utmaLogotype.png" width="33px" height="33px" alt="Logotype" />
                                 </div>
                             </div>
@@ -23,7 +24,7 @@ export function Header() {
                     <div class="links-design collapse navbar-collapse col-lg-3 " id="navbarsExampleDefault">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item"><Link to="/userDashboard" className="nav-link UserDashboard">Inicio</Link></li>
-                            <li class="nav-item"><Link to="/profile" className="nav-link UserDashboard">Perfil</Link></li>
+                            <li class="nav-item"><Link to="/profile" className="nav-link UserDashboard">Perfil</Link></li>  {/* Esta opcion solo debe estar con el usuario de alumno */}
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#!" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opciones</a>
                                 <div class="dropdown-menu menu" aria-labelledby="navbarDropdownMenuLink">     

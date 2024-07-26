@@ -46,6 +46,11 @@ function CardSport() {
                                 <img src="images/eSports.png" alt="E-SPORTS"/>
                             </div>
                             <div>
+                                {/* En esta parte el boton sera dependiendo el usuario: 
+                                    * en el caso del alumno sera: "Aplicar"
+                                    * en el caso del maestro sera: "Ver listado de alumnos"
+                                    * en el caso del administrador sera: "Visualizar"
+                                */}
                                 <button type="button" className={`card-img-bottom btn btn-card-style-card-sport-apply ${buttonState.backgroundColor}`} onClick={handleButtonClick}>
                                     {buttonState.text}
                                 </button> 

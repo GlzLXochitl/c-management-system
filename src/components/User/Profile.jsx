@@ -61,8 +61,8 @@ function Profile() {
 
                             {/* LEFT COLUMN (PHOTO CONTAINER) */}
                             <div className="col-lg-4">
-                                <div className="card mb-4">
-                                    <div className="card-body text-center">
+                                <div className="card card-porfile-coordinator mb-4">
+                                    <div className="card-body card-body-porfile-coordinator text-center">
                                         <img
                                             src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
                                             alt="avatar"
@@ -85,8 +85,8 @@ function Profile() {
                             {/* RIGHT COLUMN (CONTAINER INFORMATION) */}
                             <div className="col-lg-8 container-info-disposition">
 
-                                <div className="card mb-4">
-                                    <div className="card-body">
+                                <div className="card card-porfile-content mb-4">
+                                    <div className="card-body card-body-porfile-content">
                                         {/* BODY: EXTRACURRICULAR ACTIVITY */}
                                         <h5 className="mb-4"> Actividad extracurricular </h5>
                                         <div className='disposition'>
@@ -134,8 +134,8 @@ function Profile() {
                                 
 
                                 {/* BODY: STUDENT DATA */}
-                                <div className="card mb-4">
-                                    <div className="card-body">
+                                <div className="card card-porfile-content mb-4">
+                                    <div className="card-body card-body-porfile-content">
                                         <h5 className="mb-4">Datos escolares</h5>
                                         <div className='disposition'>
                                             <div className='listMain'>

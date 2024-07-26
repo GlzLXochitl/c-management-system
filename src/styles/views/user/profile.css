@@ -1,3 +1,36 @@
+/*.card {
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+}*/
+
+/*.card-body {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}*/
+
+.card-porfile-coordinator {
+  box-shadow: 4px 4px 10px 0.1px #D7DEE4;
+  border-radius: 10px;
+}
+
+.card-porfile-content {
+  border-radius: 5px;
+}
+
+.card-body-porfile-coordinator {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.card-body-porfile-content {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
 /* ESTILOS PARA JUMBOTRON */
 #jumbotron {
   background-size: cover;
@@ -48,10 +81,6 @@
 /* ESTILOS PARA TUTOR AVATAR */
 .tutor-avatar {
   width: 150px;
-}
-.card {
-  box-shadow: 4px 4px 10px 0.1px #D7DEE4;
-  border-radius: 10px;
 }
 
 /* ESTILOS PARA LISTAS */

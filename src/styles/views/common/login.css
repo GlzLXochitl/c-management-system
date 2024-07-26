@@ -1,4 +1,25 @@
+#login-background {
+  background-image: url('../../../../public/images/login.jpg'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta real de tu imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-color: #F5F5F5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+#login-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(53, 191, 175, 0.466); /* Corregido para aplicar opacidad */
+  background-size: cover;
+  background-position: center;
+}
 
 /*.card {
   margin-top: 3rem;
@@ -22,7 +43,10 @@
   padding: 20px;
   margin-left: 1rem;
   margin-right: 1rem;
+  background-color: rgba(255, 255, 255, 0.815);
 }
+
+
 
 .card-content-disposition-login {
   margin: 1rem;

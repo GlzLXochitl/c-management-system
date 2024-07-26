@@ -60,6 +60,8 @@ function Login() {
         <>
             {/* CONTENEDOR PRINCIPAL DEL FORMULARIO DE LOGIN */}
             
+            {/* Modificasion del fondo del login, colocar una imagen con transparecia a azul */}
+                  <body id='login-background'>
                     <div className="col-md-4 offset-md-4">
                         {/* TARJETA DE LOGIN */}
                         <div className="card card-login my-5">
@@ -125,6 +127,7 @@ function Login() {
                             </div>
                         </div>
                     </div>
+                  </body>
             
         </>
     );

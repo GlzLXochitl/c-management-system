@@ -10,14 +10,14 @@ function TeacherDashboard() {
                 <div className="container">
 
                     {/*success alert for notifications*/}
-                    <div class="alert alert-success text-left alert-dismissible fade show alert-click" role="alert">
+                    {/*<div class="alert alert-success text-left alert-dismissible fade show alert-click" role="alert">
                         <div className='menssage-notification-alert'>
                             <strong>Hola Emilio!</strong><span className='menssage-alert'>Tienes una notificación.</span> <strong><Link to="/notifications" className="nav-link link-style"> Da click aqui para ver tus notificaciones.</Link></strong> 
                         </div>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div>
+                    </div>*/}
 
                     <div className="row">
                         <div className="col-lg-4">
