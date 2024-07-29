@@ -3,12 +3,14 @@ import React from 'react';
 function AlumnListAdmin() {
     return (
         <>
+            {/* NOTA: LAS CLASES TIENEN LOS MISMOS NOMBRES DE EL COMPONENTE DE CAMBIO DE CONTRASEÑA ESTO SE DEBERA ADAPTAR O ELIMINAR SEGUN LAS NESECIDADES */}
+
             <div className='title-style'>
                 <h1>Listado de alumnos</h1>
             </div>
             <div className='table-container'>
                 <table class="table">
-                    <thead class="thead-dark">
+                    <thead class="thead thead-table-list-alumns-teacher">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nombre</th>
@@ -64,7 +66,7 @@ function AlumnListAdmin() {
                     </tbody>
                 </table>
                 <div className='btn-container'>
-                    <button type="button" class="btn btn-dark btn-list-disposition">Descargar listado físico</button>
+                    <button type="button" class="btn btn-dark btn-list-disposition btn-teacher-listado-dow">Descargar listado físico</button>
                 </div>
             </div>
             

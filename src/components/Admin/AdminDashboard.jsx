@@ -15,7 +15,7 @@ function AdminDashboard() {
         <>
         
             <div className='title-style'>
-                <h1>Talleres y Deportes</h1>
+                {/*<h1>Talleres y Deportes</h1>*/}
                 <div id='btns-container'>
                     <div>
                         <button id='edit' type="button" class="btn btn-primary btn-design">

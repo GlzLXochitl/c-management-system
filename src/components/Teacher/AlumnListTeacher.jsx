@@ -8,7 +8,7 @@ function AlumnList() {
             </div>
             <div className='table-container'>
                 <table class="table">
-                    <thead class="thead-dark">
+                    <thead class="thead thead-table-list-alumns-teacher">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nombre</th>
@@ -64,7 +64,7 @@ function AlumnList() {
                     </tbody>
                 </table>
                 <div className='btn-container'>
-                    <button type="button" class="btn btn-dark btn-list-disposition">Descargar listado físico</button>
+                    <button type="button" class="btn btn-dark btn-list-disposition btn-teacher-listado-dow">Descargar listado físico</button>
                 </div>
             </div>
 
