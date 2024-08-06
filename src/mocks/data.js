@@ -1,4 +1,40 @@
 const userData = {
+    
+    cardSport: {
+        sportName: 'E-Sports',
+        sportDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolore eum molestiae facere sequi quis fuga in et ea, expedita tempore cupiditate accusantium culpa illo repudiandae alias explicabo eaque nesciunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolore eum molestiae facere sequi quis fuga in et ea, expedita tempore cupiditate accusantium culpa illo repudiandae alias explicabo eaque nesciunt!',
+        schedule: 'Lunes, Miercoles y Viernes de 16:00 a 18:00',
+        lengthCourse: '13 de Agosto - 13 de Octubre',
+        coordinator: 'Alejandro Carmona Filopondio de Flore',
+        email: 'el.filo.flore@utma.edu.mx',
+        phone: '(+49) 301 234 5678',
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     porfile: {
         name: 'Edith Angelica Gonzalez Leos',
         career: 'Information technologies area multiplatform software development',

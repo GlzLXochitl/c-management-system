@@ -1,8 +1,8 @@
 import React from 'react';
 
-import '../../styles/views/common/login.css';
+import '../../components/Views/Login/login.css';  /* Estilos de LoginNotRegistered.jsx */
 
-import AppLoginNotRegistered from '../../components/Views/LoginNotRegistered.jsx';
+import AppLoginNotRegistered from '../../components/Views/LoginNotRegistered/LoginNotRegistered.jsx';
 
 
 function LoginNotRegistered() {

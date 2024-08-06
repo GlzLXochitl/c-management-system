@@ -1,15 +1,15 @@
 import React from 'react';
 
-import '../../styles/layout/header.css';
-import '../../styles/views/user/userDashboard.css';
-import '../../styles/views/common/cardSport.css';
-import '../../styles/layout/footer.css';
+import '../../components/Common/Header/header.css';
+import '../../components/User/UserDashboard/userDashboard.css';   /* Aqui se encuentran los estilos de Jumb.jsx */
+import '../../components/Common/CardSport/cardSport.css';
+import '../../components/Common/Footer/footer.css';
 
-import AppHeader from '../../components/Common/Header.jsx';
-import AppJumUser from '../../components/User/Jumb.jsx';
-import AppUserDashboard from '../../components/User/UserDashboard.jsx';
-import AppCardSport from '../../components/Common/CardSport.jsx';
-import AppFooter from '../../components/Common/Footer.jsx';
+import AppHeader from '../../components/Common/Header/Header.jsx';
+import AppJumUser from '../../components/User/Jumb/Jumb.jsx';
+import AppUserDashboard from '../../components/User/UserDashboard/UserDashboard.jsx';
+import AppCardSport from '../../components/Common/CardSport/CardSport.jsx';
+import AppFooter from '../../components/Common/Footer/Footer.jsx';
 
 function UserDashboard() {
   return (

@@ -1,12 +1,12 @@
 import React from 'react';
 
-import '../../styles/layout/header.css';
-import '../../styles/views/admin/alumnListAdmin.css';
-import '../../styles/layout/footer.css';
+import '../../components/Common/Header/header.css';
+import '../../components/Admin/AlumnListAdmin/alumnListAdmin.css';
+import '../../components/Common/Footer/footer.css';
 
-import AppHeader from '../../components/Common/Header.jsx';
-import AppAlumnListAdmin from '../../components/Admin/AlumnListAdmin.jsx';
-import AppFooter from '../../components/Common/Footer.jsx';
+import AppHeader from '../../components/Common/Header/Header.jsx';
+import AppAlumnListAdmin from '../../components/Admin/AlumnListAdmin/AlumnListAdmin.jsx';
+import AppFooter from '../../components/Common/Footer/Footer.jsx';
 
 function AlumnListAdmin() {
   return (
