@@ -11,7 +11,7 @@ import AppFooter from '../../components/Common/Footer/Footer.jsx';
 function ChangePassword() {
   return (
       <>
-        <AppHeader />
+        <AppHeader/>
         <AppchangePassword /> 
         <AppFooter />
       </>

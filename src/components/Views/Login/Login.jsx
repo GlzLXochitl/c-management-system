@@ -1,8 +1,6 @@
-import React, { useState } from 'react';  // Importar el hook useState
-import { useNavigate } from 'react-router-dom';  // Importar el hook useNavigate
+import React, { useState } from 'react';  
+import { useNavigate } from 'react-router-dom'; 
 import { Link } from 'react-router-dom';
-
-//import '../../styles/views/common/login.css';  // Importar el archivo de estilos CSS
 
 function Login() {
     const [userName, setUserName] = useState('');
@@ -77,7 +75,7 @@ function Login() {
                                     <input
                                         className="form-control"
                                         type="text"
-                                        placeholder="Username"
+                                        placeholder="Nombre de usuario"
                                         value={userName}
                                         onChange={(e) => setUserName(e.target.value)}
                                         onKeyDown={handleKeyDown}
@@ -88,7 +86,7 @@ function Login() {
                                     <input
                                         className="form-control"
                                         type="password"
-                                        placeholder="Password"
+                                        placeholder="Contraseña"
                                         value={userPassword}
                                         onChange={(e) => setUserPassword(e.target.value)}
                                         onKeyDown={handleKeyDown}
@@ -118,14 +116,13 @@ function Login() {
                                 
                                 {/* BOTÓN DE LOGIN */}
                                 <div className="text-center">
-                                    <button className="btn btn-primary btn-login-style" id="login" onClick={handleLogin}>Login</button>
+                                    <button className="btn btn-primary btn-login-style" id="login" onClick={handleLogin}>Iniciar sesión</button>
                                 </div>
-                                {/* TEXTO DE REGISTRO Y MÁS INFORMACIÓN */}
                                 <div id="emailHelp" className="form-text text-center mb-5 text-dark">
-                                    Not Registered? <br/>
-                                    <Link to="/loginNotRegistered" className=" create-account-style"> More information</Link>
+                                  <Link to="/" className=" create-account-style">Registrarte</Link><br/>  {/* create-account */}
+                                  <Link to="/change-password" className="password-recovery-style">¿Olvidaste tu contraseña?</Link>
                                 </div>
-                            </div>
+                            </div>  
                         </div>
                     </div>
                   </body>

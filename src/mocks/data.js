@@ -1,5 +1,12 @@
 const userData = {
     
+    footer: {
+        utma: 'TECNOLOGICA METROPOLITNA DE AGUASCALIENTES',
+        ubication: 'Av. Gerónimo de la Cueva s/n, Villas del Río, 20126 Aguascalientes, Ags.',
+        phone: '(+52) 449 910 20 00',
+        copyright: '© 2024 Company, Inc',
+    },
+
     cardSport: {
         sportName: 'E-Sports',
         sportDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolore eum molestiae facere sequi quis fuga in et ea, expedita tempore cupiditate accusantium culpa illo repudiandae alias explicabo eaque nesciunt! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus dolore eum molestiae facere sequi quis fuga in et ea, expedita tempore cupiditate accusantium culpa illo repudiandae alias explicabo eaque nesciunt!',

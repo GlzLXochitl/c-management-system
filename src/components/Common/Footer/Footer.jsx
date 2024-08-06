@@ -1,8 +1,16 @@
 import React from 'react'
+import { userData } from '../../../mocks/data.js';
 
 //import '../../styles/layout/footer.css';
 
 function Footer() {
+
+  const { 
+    footer
+  } = userData;
+
+  console.log(userData);
+
     return (
         <div className="footer-complet-contact">
           {/* BLOQUE PRINCIPAL DE CONTENIDO DEL PIE DE PÁGINA */}
@@ -17,7 +25,7 @@ function Footer() {
                   </div>
                   <div className="nameLogotype">
                     <div className="utma">
-                      TECNOLOGICA METROPOLITNA DE AGUASCALIENTES
+                      {footer.utma}
                     </div>
                    
                   </div>
@@ -29,12 +37,12 @@ function Footer() {
                 <p>
                   <i className="fas fa-phone me-3"></i>
                   <span className="details">Dirección:</span> 
-                  <p>Av. Gerónimo de la Cueva s/n, Villas del Río, 20126 Aguascalientes, Ags.</p> {/* address */}
+                  <p>{footer.ubication}</p> {/* address */}
                 </p>
                 <p>
                   <i className="fas fa-print me-3"></i>
                   <span className="details">Teléfono:</span> 
-                  <p>449 925 3920</p> {/* phone number */}
+                  <p>{footer.phone}</p> {/* phone number */}
                 </p>
                 
               </div>
@@ -67,7 +75,7 @@ function Footer() {
             </div>
             <div className="Copyright">
             <div className="col-md-6 d-flex align-items-center justify-content-center list-unstyled d-flex">
-                <span className="mb-3 mb-md-0 text-muted">&copy; 2024 Company, Inc</span> {/* copyright */}
+                <span className="mb-3 mb-md-0 text-muted">{footer.copyright}</span> {/* copyright */}
               </div>
               </div>
           </div>
