@@ -1,5 +1,6 @@
 import React from 'react';
 import { MdPadding } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 //import '../../styles/views/common/changePassword.css';
 
@@ -39,7 +40,7 @@ function changePassword() {
                 <div className="row">
                     <div className="col-md-12">
             <form>
-            <h1>Cambia tu contraseña</h1><br></br>
+            <h1 className='title-change-password-disposition'>Cambia tu contraseña</h1><br></br>
                 <div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -51,48 +52,39 @@ function changePassword() {
                             <input type="email" class="form-control" id="inputEmail4" placeholder="@utma.edu.mx"/>
                         </div>
                     </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    <div  class="form-row align-items-center">
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary btn-style-change-password">Enviar código</button>
+                        </div>
+                        <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Introduce el código</div>
+                                </div>
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="ej. 4H6rf7"/>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div>
                     <div class="form-group">
-                        <label for="inputAddress">Address</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"/>
+                        <label for="inputAddress">Nueva contraseña</label>
+                        <input type="password" class="form-control" id="inputAddress" placeholder="Contraseña"/>
                     </div>
                     <div class="form-group">
-                        <label for="inputAddress2">Address 2</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
+                        <label for="inputAddress2">Introduce nuevamente la contraseña nueva</label>
+                        <input type="password" class="form-control" id="inputAddress2" placeholder="Confirmar la contraseña"/>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                        <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity"/>
-                        </div>
-                        <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck"/>
-                        <label class="form-check-label" for="gridCheck">
-                            Check me out
-                        </label>
-                        </div>
-                    </div>
+                    
+                    
                 </div>
-                
-                
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary btn-style-change-password">Confirmar</button>
+                {/*
+                    este boton te va a mandar a login si no habia una secion previamente iniciada
+                    y si es que estaba iniciada te va a retornar al dash del unuario correspondiente
+                */}
             </form>
 
 </div></div> </div>

@@ -25,13 +25,13 @@ export function Header() {
 
                     <div class="links-design collapse navbar-collapse col-lg-3 " id="navbarsExampleDefault">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item"><Link to="/userDashboard" className="nav-link UserDashboard">Inicio</Link></li>
+                            <li class="nav-item"><Link to="/user-dashboard" className="nav-link UserDashboard">Inicio</Link></li>
                             <li class="nav-item"><Link to="/profile" className="nav-link UserDashboard">Perfil</Link></li>  {/* Esta opcion solo debe estar con el usuario de alumno */}
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#!" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opciones</a>
                                 <div class="dropdown-menu menu" aria-labelledby="navbarDropdownMenuLink">     
                                     <h6 className="dropdown-header title-section-menu menu-op">Seguridad y Privacidad</h6>
-                                    <Link to="/password" className="dropdown-item menu">Cambiar mi contraseña</Link>
+                                    <Link to="/change-password" className="dropdown-item menu">Cambiar mi contraseña</Link>
                                     <Link to="/privacy" className="dropdown-item menu">Privacidad</Link>
                                     <br />     
                                     <h6 className="dropdown-header title-section-menu menu-op">Soporte y Ayuda</h6>

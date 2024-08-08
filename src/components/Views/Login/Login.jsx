@@ -1,134 +1,156 @@
-import React, { useState } from 'react';  
-import { useNavigate } from 'react-router-dom'; 
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import axios from 'axios'; 
 
-function Login() {
-    const [userName, setUserName] = useState('');
-    const [userPassword, setUserPassword] = useState('');
-    const navigate = useNavigate();
-    const [AuthenticationBadData, setAuthenticationBadData] = useState(false);
-    const [AuthenticationWithoutData, setAuthenticationWithoutData] = useState(false);
+const Login = () => {
+  const [userEmail, setuserEmail] = useState('');
+  const [userPassword, setUserPassword] = useState('');
+  const navigate = useNavigate();
+  const [AuthenticationBadData, setAuthenticationBadData] = useState(false);
+  const [AuthenticationWithoutData, setAuthenticationWithoutData] = useState(false);
 
-    // Función para manejar datos incorrectos con temporizador
-    const handleBadData = () => {
-      setAuthenticationBadData(true);
+  const API_IP_ADDRESS = "http://192.168.1.142:3000";
+
+  // Función para manejar datos incorrectos con temporizador
+  const handleBadData = () => {
+    setAuthenticationBadData(true);
+    setTimeout(() => {
+      document.getElementById("badDataMessage").classList.add("fade-out");
       setTimeout(() => {
-        // Aquí, en lugar de simplemente ocultar el mensaje, inicia la animación
-        document.getElementById("badDataMessage").classList.add("fade-out");
-        setTimeout(() => {
-          setAuthenticationBadData(false); // Finalmente, oculta el mensaje después de la animación
-        }, 3000); // Asegúrate de que este temporizador coincida con la duración de tu animación
+        setAuthenticationBadData(false);
       }, 3000);
-    };
+    }, 3000);
+  };
 
-    // Función para manejar la ausencia de datos con temporizador
-    const handleWithoutData = () => {
-      setAuthenticationWithoutData(true);
+  // Función para manejar la ausencia de datos con temporizador
+  const handleWithoutData = () => {
+    setAuthenticationWithoutData(true);
+    setTimeout(() => {
+      document.getElementById("withoutDataMessage").classList.add("fade-out");
       setTimeout(() => {
-        // Inicia la animación para desvanecer
-        document.getElementById("withoutDataMessage").classList.add("fade-out");
-        setTimeout(() => {
-          setAuthenticationWithoutData(false); // Oculta el mensaje después de la animación
-        }, 3000); // Coincide con la duración de la animación
+        setAuthenticationWithoutData(false);
       }, 3000);
-    };
+    }, 3000);
+  };
 
-    const handleLogin = () => {
-      if (!userName || !userPassword) {
-        handleWithoutData();
-      } else if (userName === "corpus" && userPassword === "1234") {
-        navigate('/admin-dashboard');
-      } else if (userName === "edith" && userPassword === "1234") {
-        navigate('/user-dashboard');
-      } else if (userName === "emilio" && userPassword === "1234") {
-        navigate('/teacher-dashboard');
+  // Funcion para enviar los datos al backend
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!userEmail || !userPassword) {
+      handleWithoutData(); 
+      return;
+    }
+    try {
+      const url = API_IP_ADDRESS + "/api/userAuth/";       /*('https://192.168.1.142:3000', { email: userEmail, password: userPassword });*/
+      var response = await axios.get(url, { 
+        params: {
+          email: userEmail, 
+          password: userPassword
+        }
+      });
+      console.log(response);
+      if (response.data) { 
+        navigate('/user-dashboard'); 
       } else {
-        handleBadData();
+        handleBadData(); 
       }
-    };
-    
+    } catch (error) {
+      handleBadData(); 
+      console.log(error);
+    }
+  };
+
+  /*
     const handleKeyDown = (event) => {
       if (event.key === 'Enter') {
         handleLogin();
       }
     };
-    
-    
 
-    return (
-        <>
-            {/* CONTENEDOR PRINCIPAL DEL FORMULARIO DE LOGIN */}
-            
-            {/* Modificasion del fondo del login, colocar una imagen con transparecia a azul */}
-                  <body id='login-background'>
-                    <div className="col-md-4 offset-md-4">
-                        {/* TARJETA DE LOGIN */}
-                        <div className="card card-login my-5">
-                          
-                            <div className="cardbody-color card-content-disposition-login p-lg-3">
-                                <div className="text-center">
-                                    {/* IMAGEN DEL PERFIL */}
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1.webp" className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3 avatar-style" width="150px" alt="profile"/>
-                                </div>
-                                {/* CAMPO DE USERNAME */}
-                                <div className="mb-3">
-                                    <input
-                                        className="form-control"
-                                        type="text"
-                                        placeholder="Nombre de usuario"
-                                        value={userName}
-                                        onChange={(e) => setUserName(e.target.value)}
-                                        onKeyDown={handleKeyDown}
-                                    />                                
-                                </div>
-                                {/* CAMPO DE PASSWORD */}
-                                <div className="mb-3">
-                                    <input
-                                        className="form-control"
-                                        type="password"
-                                        placeholder="Contraseña"
-                                        value={userPassword}
-                                        onChange={(e) => setUserPassword(e.target.value)}
-                                        onKeyDown={handleKeyDown}
-                                    />                                
-                                </div>
+  */
 
-                                <div id='alert-container'>
-                                    <div className='alert-container'>
-                                        {AuthenticationBadData && (
-                                            <div className="alert alert-danger" id="badDataMessage" role="alert">
-                                                <img id='alert-icon' src="/images/informacion.png" alt="" />
-                                                User or password incorrect
-                                            </div>
-                                        )}
-                                    </div>
+  return (
+    <>
+      <body id='login-background'>
+        <div className="col-md-4 offset-md-4">
+          <form onSubmit={handleSubmit}>
+            <div className="card card-login my-5">
+              <div className="cardbody-color card-content-disposition-login p-lg-3">
+                <div className="text-center">
+                  {/* IMAGEN DEL PERFIL */}
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1.webp"
+                    className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3 avatar-style"
+                    width="150px"
+                    alt="profile"
+                  />
+                </div>
+                {/* CAMPO DE EMAIL */}
+                <div className="mb-3">
+                  <input
+                    className="form-control"
+                    type="email"
+                    placeholder="Email"
+                    value={userEmail}
+                    onChange={(e) => setuserEmail(e.target.value)}
+                    required 
+                  />
+                </div>
+                {/* CAMPO DE PASSWORD */}
+                <div className="mb-3">
+                  <input
+                    className="form-control"
+                    type="password"
+                    placeholder="Contraseña"
+                    value={userPassword}
+                    onChange={(e) => setUserPassword(e.target.value)}
+                    required 
+                  />
+                </div>
 
-                                    <div id='alert-container'>
-                                        {AuthenticationWithoutData && (
-                                            <div className="alert alert-danger" id="withoutDataMessage" role="alert">
-                                                <img id='alert-icon' src="/images/informacion.png" alt="" />
-                                                Llena los datos para autenticarte
-                                            </div>
-                                        )}
-                                    </div>
+                <div id='alert-container'>
+                  <div className='alert-container'>
+                    {AuthenticationBadData && (
+                      <div className="alert alert-danger" id="badDataMessage" role="alert">
+                        <img id='alert-icon' src="/images/informacion.png" alt="" />
+                        Usuario o contraseña incorrectos
+                      </div>
+                    )}
+                  </div>
 
-                                </div>
-                                
-                                {/* BOTÓN DE LOGIN */}
-                                <div className="text-center">
-                                    <button className="btn btn-primary btn-login-style" id="login" onClick={handleLogin}>Iniciar sesión</button>
-                                </div>
-                                <div id="emailHelp" className="form-text text-center mb-5 text-dark">
-                                  <Link to="/" className=" create-account-style">Registrarte</Link><br/>  {/* create-account */}
-                                  <Link to="/change-password" className="password-recovery-style">¿Olvidaste tu contraseña?</Link>
-                                </div>
-                            </div>  
-                        </div>
-                    </div>
-                  </body>
-            
-        </>
-    );
-}
+                  <div id='alert-container'>
+                    {AuthenticationWithoutData && (
+                      <div className="alert alert-danger" id="withoutDataMessage" role="alert">
+                        <img id='alert-icon' src="/images/informacion.png" alt="" />
+                        Llena los datos para autenticarte
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* BOTÓN DE LOGIN */}
+                <div className="text-center">
+                  <button className="btn btn-primary btn-login-style" id="login" type="submit"> {/* type="submit" es basicamente el que activa la autenticasión */}
+                    Iniciar sesión
+                  </button>
+                </div>
+
+                <div id="emailHelp" className="form-text text-center mb-5 text-dark">
+                  <Link to="/user-register" className="create-account-style">
+                    Registrarte
+                  </Link>
+                  <br /> 
+                  <Link to="/change-password" className="password-recovery-style">
+                    ¿Olvidaste tu contraseña?
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </body>
+    </>
+  );
+};
 
 export default Login;

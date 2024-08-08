@@ -6,7 +6,7 @@ import { AuthProvider } from '../src/context/AuthProvider';
 
 import AppAdminDashboard from '../src/utils/Admin/AdminDashboard.js';
 import AppAlumnListAdmin from '../src/utils/Admin/AlumnListAdmin.js';
-import AppFormApply from '../src/utils/Admin/FormApply.js';
+import AppForm from './utils/Common/Form.js';
 import AppChangePassword from '../src/utils/Common/ChangePassword.js';
 import AppComments from '../src/utils/Common/Comments.js';
 import AppHelp from '../src/utils/Common/Help.js';
@@ -18,6 +18,7 @@ import AppAlumnListTeacher from '../src/utils/Teacher/AlumnListTeacher.js';
 import AppTeacherDashboard from '../src/utils/Teacher/TeacherDashboard.js';
 import AppProfile from '../src/utils/User/Profile.js';
 import AppUserDashboard from '../src/utils/User/UserDashboard.js';
+import AppUserRegister from '../src/utils/Common/UserRegister.js';
 
 const App = () => {
   return (
@@ -38,9 +39,9 @@ const App = () => {
             </ProtectedRoute>
           } />
           
-          <Route path="form-apply" element={
+          <Route path="form" element={
             <ProtectedRoute>
-              <AppFormApply />
+              <AppForm />
             </ProtectedRoute>
           } />
 
@@ -84,11 +85,19 @@ const App = () => {
             <ProtectedRoute>
               <AppUserDashboard />
             </ProtectedRoute>
-          } />*/}
+          } />
+           
+          <Route path="user-register" element={
+            <ProtectedRoute>
+              <AppUserRegister />
+            </ProtectedRoute>
+          } />
+
+           */}
 
           <Route path="admin-dashboard" element={<AppAdminDashboard />} />
           <Route path="alumn-list-admin" element={<AppAlumnListAdmin />} />
-          <Route path="form-apply" element={<AppFormApply />} />
+          <Route path="form" element={<AppForm />} />
           <Route path="change-password" element={<AppChangePassword />} />
           <Route path="comments" element={<AppComments />} />
           <Route path="notifications" element={<AppNotifications />} />
@@ -96,6 +105,7 @@ const App = () => {
           <Route path="teacher-dashboard" element={<AppTeacherDashboard />} />
           <Route path="profile" element={<AppProfile />} />
           <Route path="user-dashboard" element={<AppUserDashboard />} />
+          <Route path="user-register" element={<AppUserRegister />} />
           
           <Route path="help" element={<AppHelp />} />
           <Route path="not-registered" element={<AppLoginNotRegistered />} />

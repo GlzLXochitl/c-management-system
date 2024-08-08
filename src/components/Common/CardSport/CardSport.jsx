@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { userData } from '../../../mocks/data.js';
+//import { config } from 'dotenv';
+
 
 //import '../../styles/views/common/cardSport.css';
+
+const API_IP_ADDRESS = "http://192.168.1.142:3000";
 
 function CardSport() {
 
@@ -13,7 +17,6 @@ function CardSport() {
     console.log(userData);
 
     const [ courses, setCourses ] = useState([]) //courses
-    const [ coordinatorName, setCoordinatorName ] = useState([]) //courses
 
     const [buttonState, setButtonState] = useState({
         text: 'Aplicar',
@@ -32,7 +35,8 @@ function CardSport() {
     useEffect(() => {
         const getCourses = async () => {
             try {
-                const response = await axios.get('http://localhost:3001/api/active_courses/1');
+                const url = API_IP_ADDRESS + '/api/courses_names/0';
+                var response = await axios.get(url);
                 console.log(response);
                 setCourses(response.data);
             } catch (error) {
@@ -42,75 +46,38 @@ function CardSport() {
         getCourses();
       }, [])
 
-      useEffect(() => {
-        const getCoordinatorName = async () => {
-            try {
-                
-                const response = await axios.get('http://localhost:3001/api/user/');
-                console.log(response);
-                setCourses(response.data);
-            } catch (error) {
-                console.log(error);
-            }        
-        }
-        getCoordinatorName();
-      }, [])
-
       // const response = await axios.get('http://10.11.3.218:3000/api/getCourses');
 
     return (
         <>
             {/* C   RD SPORT */}
-            <div className='container mt-4'>
+            {courses.map(crs => {
+                return (
+                    <div className='container mt-4'>
                 <div className="card card-cardsport">
                         <div className="card-body card-body-sports">
-                            <h5 className="card-title">{cardSport.sportName}</h5>
+                            <h5 className="card-title">{crs.course_catalog.name}</h5>
                             
                             {/*<div className="d-flex align-items-center mb-3">
                                 <img src="images/botonVerde.png" className="card-img-top" alt="Disponibilidad" />
                                 <p className="card-text ms-2 mb-0"><small className="text-success">INSCRIPCIONES ABIERTAS</small></p>
                             </div>*/}
                             
-                            <div>
-                                <div>
-                                    <table border="1">
-                                        <thead>
-                                            <tr>
-                                                <th>Coordinator</th>
-                                                <th>Schedule</th>
-                                                <th>Credits obtained</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {courses.map(crs => {
-                                                return (
-                                                <tr key={crs.coordinator_user_id}>
-                                                    <td>{crs.coordinator_user_id}</td>
-                                                    <td>{crs.schedule}</td>
-                                                    <td>{crs.credits_obtained}</td>
-                                                </tr>
-                                                );
-                                            })}
-                                        </tbody>
-                                    </table>
-                                </div>
-                                {!courses ? "nosta" : "sista"}
-                            </div>
+                            
                             
                             <div>
                                 <p className="card-text card-text-info">
-                                    {cardSport.sportDescription} 
+                                    {crs.description} 
                                 </p>
                             </div>
 
                             <div className='mb-3 text-container-details'>
-                                <p className="card-text"><small className="text-body-secondary"><strong>Duración: </strong>{cardSport.lengthCourse}</small></p>
-                                <p className="card-text"><small className="text-body-secondary"><strong>Horario: </strong>{cardSport.schedule}</small></p>
+                                <p className="card-text"><small className="text-body-secondary"><strong>Creditos que otorga al terminar: </strong>{crs.credits_obtained}</small></p>
+                                <p className="card-text"><small className="text-body-secondary"><strong>Horario: </strong>{crs.schedule}</small></p>
                             </div>
                             <div className='mb-3 text-container-details'>
-                                <p className="card-text"><small className="text-body-secondary"><strong>Coordinador del taller: </strong>{cardSport.coordinator}</small></p>
-                                <p className="card-text"><small className="text-body-secondary"><strong>Correo electrónico: </strong>{cardSport.email}</small></p>
-                                <p className="card-text"><small className="text-body-secondary"><strong>Teléfono: </strong>{cardSport.phone}</small></p>
+                                <p className="card-text"><small className="text-body-secondary"><strong>Coordinador del taller: </strong>{crs.user.name} {crs.user.last_name}</small></p>
+                                <p className="card-text"><small className="text-body-secondary"><strong>Correo electrónico: </strong>{crs.user.email}</small></p>
                             </div>
                         </div>
                         <div className='card-body-sports-img' >
@@ -130,6 +97,9 @@ function CardSport() {
                         </div>                
                 </div>
             </div>
+                    );
+                })}
+            
         </>
     );
 }
