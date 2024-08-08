@@ -19,6 +19,7 @@ import AppTeacherDashboard from '../src/utils/Teacher/TeacherDashboard.js';
 import AppProfile from '../src/utils/User/Profile.js';
 import AppUserDashboard from '../src/utils/User/UserDashboard.js';
 import AppUserRegister from '../src/utils/Common/UserRegister.js';
+import AppFormRegisterCourse from '../src/utils/Admin/FormRegisterCourse.js';
 
 const App = () => {
   return (
@@ -106,6 +107,7 @@ const App = () => {
           <Route path="profile" element={<AppProfile />} />
           <Route path="user-dashboard" element={<AppUserDashboard />} />
           <Route path="user-register" element={<AppUserRegister />} />
+          <Route path="form-register-course" element={<AppFormRegisterCourse />} />
           
           <Route path="help" element={<AppHelp />} />
           <Route path="not-registered" element={<AppLoginNotRegistered />} />

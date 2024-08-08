@@ -1,0 +1,45 @@
+#card-disposition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+}
+
+.form-container {
+    margin: 20px 50px 100px 50px;
+    
+}
+
+.title-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.body-card-design {
+    font-weight: 500;
+}
+
+.checkbox-schedule {
+    
+    justify-content: center;
+    
+    margin-top: 20px;
+}
+
+.checkbox-container {
+    display:inline;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-style-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
