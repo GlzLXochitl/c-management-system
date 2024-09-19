@@ -20,7 +20,6 @@ The project uses the following dependencies:
 - `animate.css`: A library of ready-to-use, cross-browser animations.
 - `axios`: Promise-based HTTP client for the browser and Node.js.
 - `body-parser`: Middleware to parse incoming request bodies in a middleware.
-<!-- - `dotenv`: Loads environment variables from a `.env` file into `process.env`. -->
 - `jspdf`: Library to generate PDFs in JavaScript.
 - `jspdf-autotable`: Plugin for jsPDF to generate tables.
 - `react`: A JavaScript library for building user interfaces.
@@ -29,6 +28,7 @@ The project uses the following dependencies:
 - `react-router-dom`: DOM bindings for React Router.
 - `react-scripts`: Scripts and configuration used by Create React App.
 - `web-vitals`: A tiny library for measuring all the Web Vitals metrics.
+<!-- - `dotenv`: Loads environment variables from a `.env` file into `process.env`. -->
 
 
 ## Installation
