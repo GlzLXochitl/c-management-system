@@ -59,6 +59,7 @@ module.exports = (sequelize, Sequelize) => {
     },
   });
 
+  
   // Function that hashes the password before saving it to the database
   User.beforeCreate(async (user, options) => {
     if (user.password) {
@@ -78,6 +79,7 @@ module.exports = (sequelize, Sequelize) => {
   User.prototype.authenticate = function (password) {
     return bcrypt.compare(password, this.password);
   };
+
 
   return User;
 };

@@ -28,7 +28,7 @@ The project uses the following dependencies:
 - `react-router-dom`: DOM bindings for React Router.
 - `react-scripts`: Scripts and configuration used by Create React App.
 - `web-vitals`: A tiny library for measuring all the Web Vitals metrics.
-<!-- - `dotenv`: Loads environment variables from a `.env` file into `process.env`. -->
+<!-- - `dotenv`: Loads environment variables from a `.env` file into `process.env`.  -->
 
 
 ## Installation
